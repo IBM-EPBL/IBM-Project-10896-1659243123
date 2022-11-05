@@ -1,0 +1,36 @@
+{% extends "boilerplate.html" %}
+{% block content %}
+<div class="row ">
+    <div class="col-10 offset-1">
+
+        <div class="bg-white shadow-sm p-3">
+            <div class="row">
+
+                <div class="col-7">
+                    <h1 class="fs-3 text-primary">Hello! <br> Welcome back </h1>
+                </div>
+                <div class="col-5">
+                    <h1>Login</h1>
+                    <form action="{{url_for('login')}}" method="post" class="needs-validation d-flex flex-column"
+                        novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" name="email" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" required>
+                        </div>
+                        <button class="btn btn-primary ms-auto w-100 rounded-pill ">Login</button>
+                        <p class="mt-2 align-self-center">Don't have an Account ? <span><a
+                                    href="{{url_for('register')}}" class="text-muted">Signup</a></span></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+{% endblock %}

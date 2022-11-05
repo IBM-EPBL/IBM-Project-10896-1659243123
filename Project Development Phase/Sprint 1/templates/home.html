@@ -1,0 +1,11 @@
+{% extends "boilerplate.html" %}
+{% block content %}
+<div class="vh-100 d-flex align-items-center justify-content-center">
+    <div class="vw-100">
+        <form action="{{url_for('login')}}" method="post">
+            <label for="web-url" class="form-label">Website URL</label>
+            <input type="text" class="form-control" name="web-url" id="web-url" required>
+        </form>
+    </div>
+</div>
+{% endblock %}
