@@ -1,0 +1,42 @@
+{% extends "boilerplate.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-10 offset-1">
+        <div class="bg-white shadow-sm p-3">
+            <div class="row">
+                <div class="col-7">
+                    <h1 class="fs-3 text-primary">Welcome to <span class="fw-bold">Web Phishing</span></h1>
+                    <h2 class="fs-5">Detecting Phishing websites</h2>
+                </div>
+                <div class="col-5">
+                    <h1>Signup</h1>
+                    <form action="{{url_for('register')}}" method="post" class="needs-validation d-flex flex-column"
+                        novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="cpassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" name="cpassword" id="cpassword" required>
+                            </div>
+                            <button class="btn btn-primary rounded-pill w-100">Signup</button>
+                            <p class="mt-2 align-self-center">Already have an account ? <span><a
+                                        href="{{url_for('login')}}" class="text-muted">Login</a></span></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

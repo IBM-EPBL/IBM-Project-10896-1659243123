@@ -1,0 +1,67 @@
+{% extends "boilerplate.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-10 offset-1 bg-white shadow-sm p-3">
+    <h1 class="fs-4 text-primary">Welcome {{ name }}</h1>
+    <h2 class="fs-5 text-secondary">My Account</h2>
+    <div class="row">
+      <div class="col-2">
+        <div class="">Name</div>
+        <div class="">Email</div>
+      </div>
+      <div class="col-4">
+        <div class="">{{ name }}</div>
+        <div class="">{{email}}</div>
+      </div>
+      <div class="col-2">
+        <div class="d-flex align-items-center flex-column">
+          <div class="bg-primary rounded-circle px-3 py-2" style="width: fit-content;">
+            <div class="fs-4">1</div>
+          </div>
+          <span class="fs-5">URL Checked</span>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="d-flex align-items-center flex-column">
+          <div class="bg-info rounded-circle px-3 py-2" style="width: fit-content;">
+            <div class="fs-4">1</div>
+          </div>
+          <span class="fs-5">Legitimate</span>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="d-flex align-items-center flex-column">
+          <div class="bg-danger rounded-circle px-3 py-2" style="width: fit-content;">
+            <div class="fs-4">1</div>
+          </div>
+          <span class="fs-5">Phishing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-10 offset-1 bg-white shadow-sm p-3">
+    <h2 class="fs-5 text-secondary">Search History</h2>
+    <table class="table table-striped">
+      <thead>
+        <th>S No.</th>
+        <th>Website URL</th>
+        <th>Result</th>
+      </thead>
+      <tbody>
+        {% for index in range(length) %}
+        <tr>
+          <td>{{index + 1}}</td>
+          <td>{{all_search[index].url}}</td>
+          <td>{{all_search[index].result}}</td>
+        </tr>
+        
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<h1>{{url}}</h1>
+{% endblock %}
