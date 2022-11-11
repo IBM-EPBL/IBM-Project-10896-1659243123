@@ -1,0 +1,25 @@
+{% extends "boilerplate.html" %}
+{% block content %}
+<div class="col-10 bg-white shadow-sm p-3 offset-1">
+    <div class="text-center">
+        <h1 class="display-6 text-primary">Web Phishing Detection using Machine Learning</h1>
+        <p class="fs-5">Our model has been trained using Logistic Regression with 91.6% Accuracy</p>
+    </div>
+    <div class="col-8 offset-2 mt-3">
+        <form action="{{url_for('check')}}" method="post">
+            <label for="web-url" class="form-label">Website URL</label>
+            <div class="d-flex">
+                <input type="url" class="form-control mb-3" placeholder="Paste URL here" name="web-url"
+                    id="web-url" required>
+                <button class="btn btn-primary rounded-pill ms-3" style="height: fit-content">Check</button>
+            </div>
+        </form>
+        {% if res == 1 %}
+            <p id="result" class="fs-5 text-center text-success fw-bold mb-0">{{message}}</p>
+        {% else %}    
+            <p id="result" class="fs-5 text-center text-danger fw-bold mb-0">{{message}}</p>
+        {% endif %}
+            <p class="text-center"><a class="fs-5" href={{url}}>{{url}}</a></p>
+        </div>
+</div>
+{% endblock %}
