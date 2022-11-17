@@ -1,0 +1,45 @@
+{% extends "boilerplate.html" %}
+{% block content %}
+<div class="row align-items-center bg-white shadow-sm ">
+    <div class="col-6 mb-5 mt-5 ps-4">
+        <h2 class="fs-4 text-primary">What is Web Phishing ?</h2>
+        <p class="lead">Phishing is a type of social engineering attack often used to steal user data,
+            including login credentials and credit card numbers.</p>
+        <a href="{{url_for('check')}}" class="btn btn-primary rounded-pill">Check URL</a>
+    </div>
+    <div class="col-6 px-0">
+        <img src="https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/12/07085924/abstract-personal-data-800x450.jpg"
+            class="img-fluid" alt="">
+    </div>
+</div>
+<div class="row align-items-center bg-primary shadow-sm text-white mt-2">
+    <div class="col mb-5 mt-5 px-4">
+        <h2 class="fs-4">How can we detect ?</h2>
+        <ul>
+            <li>Phishing is one of the most frequent forms of cyber crime, but despite how much we think
+                we know about these scams, they still catch us out all too often.</li>
+            <li><span class="fw-bold">The message is sent from a public email domain.</span> No
+                legitimate organisation will send emails from an address that ends '@gmail.com'.</li>
+            <li><span class="fw-bold">The domain name is misspelt.</span> There’s another clue hidden in
+                domain names that provides a strong indication of phishing scams ­– unfortunately, it
+                complicates our previous clue.</li>
+            <li><span class="fw-bold">The email is poorly written.</span> You can often tell if an email
+                is a scam if it contains poor spelling and grammar.</li>
+        </ul>
+
+    </div>
+
+</div>
+<div class="row align-items-center bg-white shadow-sm mt-2">
+    <div class="col mb-5 mt-5 px-4">
+        <h2 class="fs-4 text-secondary">How our model works</h2>
+        <p class="fs-6">In order to detect and predict phishing websites, we proposed an intelligent, flexible
+            and effective system that is based on using classification algorithms. We implemented classification
+            algorithms and techniques to extract the phishing datasets criteria to classify their legitimacy.
+            The phishing website can be detected based on some important characteristics like URL and domain
+            identity, and security and encryption criteria in the final phishing detection rate.</p>
+        <img src="https://lh4.googleusercontent.com/oohEvy6ZvTTr7oKH1fL_lPeOkdiDQJbtEWcxIe4_CnFcjj5jnFB3tib6sN627fFztSzTSAVjvepuUVNYQo4913L0IVN_VCz7ItxnlJWtURhtg8xan8wTBT8GxMJ3iN1yquYJTi1R"
+            class="img-fluid ms-4" alt="">
+    </div>
+</div>
+{% endblock %}
